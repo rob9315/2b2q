@@ -173,7 +173,11 @@ fn stat(opts: Stat) {
 
     _2b2q::nn::log(&borrowed[..], &logging_data_points[..])
 }
-fn train(opts: Train) {
+fn train(mut opts: Train) {
+    if opts.mse.is_some() {
+        opts.r#loop = false;
+    }
+
     let mut net = _2b2q::load_model(&opts.model);
 
     let data =
