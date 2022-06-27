@@ -1,0 +1,12 @@
+[package]
+name = "_2b2q"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.19"
+clap = { version = "3.2.6", features = ["derive"] }
+nn = "0.1.6"
+rayon = "1.5.3"
